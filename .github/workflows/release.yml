@@ -24,8 +24,6 @@ jobs:
         with:
           node-version: lts/*
           registry-url: https://registry.npmjs.org
-      - name: Install brec locally
-        run: npm install --global .
       - name: Build brec
         run: bun run brec build
       - name: Publish to NPM
