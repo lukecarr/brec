@@ -1,6 +1,6 @@
 {
   "name": "brec",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A task runner for the Bun ecosystem.",
   "keywords": [
     "bun",
