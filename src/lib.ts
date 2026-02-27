@@ -7,17 +7,15 @@ export interface Recipe {
   run: () => Promise<any> | void;
 }
 
-export function recipe(
-  description: string,
-  run: () => Promise<any> | void,
-  deps?: Recipe[],
-): Recipe;
+export type Task = () => Promise<any> | void;
 
-export function recipe(run: () => Promise<any> | void, deps?: Recipe[]): Recipe;
+export function recipe(description: string, run: Task, deps?: Recipe[]): Recipe;
+
+export function recipe(run: Task, deps?: Recipe[]): Recipe;
 
 export function recipe(
-  descriptionOrRun: string | (() => Promise<any> | void),
-  runOrDeps?: (() => Promise<any> | void) | Recipe[],
+  descriptionOrRun: string | Task,
+  runOrDeps?: Task | Recipe[],
   maybeDeps?: Recipe[],
 ): Recipe {
   if (typeof descriptionOrRun === "function") {
