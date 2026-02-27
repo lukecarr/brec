@@ -1,0 +1,40 @@
+{
+  "name": "brec",
+  "version": "0.0.5",
+  "description": "A task runner for the Bun ecosystem.",
+  "keywords": [
+    "bun",
+    "task",
+    "async",
+    "cli",
+    "minify",
+    "uglify",
+    "build",
+    "make",
+    "grunt"
+  ],
+  "homepage": "https://github.com/lukecarr/brec#readme",
+  "bugs": "https://github.com/lukecarr/brec/issues",
+  "license": "MIT",
+  "author": "Luke Carr <me@carr.sh> (https://carr.sh/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukecarr/brec.git"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib.js",
+      "types": "./lib.d.ts"
+    }
+  },
+  "bin": {
+    "brec": "cli.js"
+  },
+  "scripts": {
+    "brec": "bun run src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.9",
+    "typescript": "^5.9.3"
+  }
+}
