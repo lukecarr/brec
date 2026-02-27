@@ -48,12 +48,12 @@ $ brec build
 Creates a recipe. Call it with a description and a run function. Optionally pass recipe dependencies as a third argument.
 
 ```ts
-recipe(description: string, run: () => void | Promise<void>, deps?: Recipe[]): Recipe
-recipe(run: () => void | Promise<void>, deps?: Recipe[]): Recipe
+recipe(description: string, run: Task, deps?: Recipe[]): Recipe
+recipe(run: Task, deps?: Recipe[]): Recipe
 ```
 
 - **description**: optional text that appears when you list recipes
-- **run**: the function to execute
+- **run**: the function to execute (`Task` is a type alias for `() => void | Promise<any>`)
 - **deps**: optional other recipes that must run first
 
 Dependencies run before the recipe. Independent dependencies run concurrently.
