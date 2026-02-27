@@ -1,4 +1,4 @@
-import { recipe, $ } from "brec";
+import { recipe, $ } from "./src/lib";
 
 export const clean = recipe(
   "Remove build artifacts",
