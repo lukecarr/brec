@@ -22,11 +22,9 @@
     "url": "git+https://github.com/lukecarr/brec.git"
   },
   "exports": {
-    ".": {
-      "import": "./lib.js",
-      "types": "./lib.d.ts"
-    }
+    ".": "./lib.js"
   },
+  "types": "./lib.d.ts",
   "bin": {
     "brec": "cli.js"
   },
